@@ -16,7 +16,7 @@ const getData = html => {
     let data = [];
     const $ = cheerio.load(html);
     
-    $('.card-body').each((i, elem) => {
+    $('.card-body[itemprop="person"]').each((i, elem) => {
         const obj = {
             id: '',
             fullName: '',
